@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Formulário.css" media="screen">
+    <title>Cadastro</title>
+</head>
+<body>
+    <div>
+        <h1 id="titulo">Cadastro de Cliente</h1>
+        <p id="subtitulo">Complete suas informações conforme solicitado</p>
+        <br>
+    </div>
+    <form>
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="nome"><strong>Nome</strong></label>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+            <div class="campo">
+                <label for="sobrenome"><strong>Sobrenome</strong></label>
+                <input type="text" name="sobrenome" id="sobrenome" required>
+            </div>
+        </fieldset>
+        <div class="campo">
+            <label for="email"><strong>Email</strong></label>
+            <input type="email" name="email" id="email" required> 
+        </div>
+        <div class="campo">
+            <label><strong>Com qual gênero você se identifica?</strong></label>
+            <label>
+                <input type="radio" name="gênero" value="cisgênero">Homem Cis
+                <input type="radio" name="gênero" value="Transgênero">Homem Trans
+                <input type="radio" name="gênero" value="cisgênero">Mulher Cis
+                <input type="radio" name="gênero" value="Transgênero">Mulher Trans
+                <input type="radio" name="gênero" value="Transgênero">Não-Binário
+                <input type="radio" name="gênero" value="Transgênero">Neutro
+                <input type="radio" name="gênero" value="Transgênero">Outros (indicar no campo abaixo)
+            </label>
+            <label>Outros*</label>
+            <input type="text" name="gênero" id="outro">
+        </div>
+        <div class="campo">
+            <label><strong>Tipo de conta desejada</strong></label>
+            <select id="conta" required>
+                <option>Conta Corrente</option>
+                <option>Conta Salário</option>
+                <option>Conta Poupança</option>
+                <option>Conta Família</option>
+                <option>Não Estou Certo</option>
+                <option selected disabled value="">Selecione</option>
+            </select>
+        </div>
+        <div id="check">
+            <label><strong>Qual(is) os principais usos dessa conta?</strong></label>
+            <input type="checkbox" id="motivo1" name="motivo1" value="Empresa Parceira">
+            <label for="motivo1">Empresa Parceira</label>
+            <input type="checkbox" id="motivo2" name="motivo2" value="Vantagens Financeiras">
+            <label for="motivo2">Vantagens Financeiras</label>
+            <input type="checkbox" id="motivo3" name="motivo3" value="Primeira Conta">
+            <label for="motivo3">Primeira Conta</label>
+            <input type="checkbox" id="motivo4" name="motivo4" value="Gerenciar Finanças Familiares">
+            <label for="motivo4">Gerenciar Finanças Familiares</label>
+        </div>
+        <div class="campo">
+            <label><strong>Nos dê mais detalhes caso necessite de ajuda na escolha da melhor conta para você</strong></label>
+            <textarea row="6" style="width: 26em" id="descrição" name="descrição"></textarea>
+        </div>
+        <button class="botao" type="submit"><strong>Enviar</strong></button>
+    </form>
+</body>
+</html>
